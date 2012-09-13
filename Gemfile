@@ -6,12 +6,15 @@ gem 'rails', '3.2.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-#gem 'mysql2', "> 0.2.18"
 gem 'devise'
 gem 'resque'
 gem 'simple_form'
 gem 'foreman'
 gem 'thin'
+
+group :production do
+  gem 'mysql2', "> 0.2.18"
+end
 
 
 # Gems used only for assets and not required
@@ -24,7 +27,7 @@ group :assets do
   # gem 'therubyracer', :platform => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-  
+
   gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 end
 
